@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo6"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-15 03:42:15 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjAzOjMzOjM5ICI7MjU1MQ=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjAzOjQyOjE1ICI7MTsyNjUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira o primeiro n&#250;mero!&quot;" newline="True"/>
+            <input variable="numero1"/>
+            <declare name="numero2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira o segundo numero!&quot;" newline="True"/>
+            <input variable="numero2"/>
+            <declare name="multiplicacao" type="Integer" array="False" size=""/>
+            <assign variable="multiplicacao" expression="numero1 * numero2"/>
+            <output expression="&quot;O dessa multiplica&#231;&#227;o &#233;: &quot; &amp; multiplicacao" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

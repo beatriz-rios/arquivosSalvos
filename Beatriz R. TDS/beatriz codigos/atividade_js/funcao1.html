@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body>
+    <script>
+        function showMessage() {
+            alert('Hello everyone!');
+        }
+        showMessage();
+        showMessage();
+
+        let userName = 'John';
+        function showMessage1() {
+            userName = "Bob";
+            let message = 'Hello ' + userName;
+            alert(message);
+
+        }
+        alert(userName);
+        showMessage1();
+        alert(userName);
+
+        function showMessage3(from, text) {
+            alert(from + ': ' + text);
+        }
+        showMessage3('Ann', 'Hello');
+        showMessage3('Ann', "What's up?");
+
+        function sum(a, b) {
+            return a + b;
+        }
+        let result = sum(1, 2);
+        alert(result);
+
+        function checkAge(age) {
+            if (age >= 18) {
+                return true;
+            }
+            else {
+                return confirm('Você tem permissão de seus responsáveis?')
+            }
+
+        }
+        let age = prompt('Quantos anos você tem? ', 18);
+        if (checkAge(age)) {
+            alert('Acesso permitido');
+
+        } else {
+            alert('Acesso Negado');
+        }
+        /*get - retorna o valor
+        calc - calcule algo
+        creat - criar algo
+        check - verifique algo e retorna um booleano, etc*/
+    
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8 do Raynner: Conta de água</title>
+</head>
+
+<body>
+    
+    <script>
+        function pula() {
+            document.write("<br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+        }
+        
+        
+        let nome = prompt("Digite seu nome completo do cliente: ");
+        document.write("Nome do cliente: " + nome + "<br>");
+        let dataEmissao = prompt("Digite a data de emissão: ");
+        document.write("Data de emissâo: " + dataEmissao + "<br>");
+        let dataVencimento = prompt("Digite a data de vencimento: ");
+        document.write("Data de vencimento: " + dataVencimento + "<br>");
+        let endereco = prompt("Digite o nome da Rua em que o cliente mora: ");
+        document.write("Endereço do cliente: " + endereco + "<br>");
+        let cidadeBairro = prompt("Digite a bairro, cidade e estado em que o cliente mora: (Ex: Parisi, Jardim Barreto - SP)");
+        document.write("Bairro, Cidade - UF do cliente: " + cidadeBairro + "<br>");
+        let hidrometro = prompt("Digite o ID do hidrômetro que deseja ver a conta: (Obs: são 6 números)");
+        document.write("ID do hidrômetro: " + hidrometro + "<br>");
+        let maisMes = prompt("Qual mês o cliente deseja ver a conta?");
+        document.write("O mês da conta é: " + maisMes);
+        pula();
+        let consumo = prompt("Digite o tanto de consumo de litros que o cliente teve no mês atual: ");
+        let m3 = consumo / 1000;
+        let valor = m3 * 12;
+        mostra("Valor em R$: " + valor);
+        pula();
+        pula();
+
+        let continuar = true;
+        let mes = prompt("Deseja adicionar mais um mês? ");
+        while (continuar = true) {
+            if (mes == "sim") {
+                let mes2 = (prompt("Qual mês o cliente deseja ver a conta?"));
+                document.write("Conta do mês: " + mes2);
+                pula();
+                let dataEm = prompt("Digite a data de emissão: ");
+                document.write("Data de Emissão: " + dataEm);
+                pula();
+                let dataVenc = prompt("Digite a data de emissão: ");
+                document.write("Data de vencimento: " + dataVenc);
+                pula();
+                let cons2 = prompt("Digite o tanto de consumo de litros que o cliente teve no mês atual: ");
+                let m = cons2 / 1000;
+               let valor2 = m * 12;
+                mostra("Valor em R$: " + valor2);
+                break;
+            } else {
+                document.write("As seguintes informações são apenas do mês atual.")
+                break; 
+            }
+
+        }
+
+
+
+
+
+    </script>
+    <style>
+       body{
+            text-align: center;
+        } 
+    </style>
+    <h2> COMPANHIA JK</h2> 
+    <h5>TELEFONE: (17) 99123-7824 <br>
+    ENDEREÇO: Rua Senai <br>
+    Horário de Funcionamento: 7hr ás 17hr. <br>
+    CNPJ:123.345 678/9101-12 <br></h5>
+    
+</body>
+
+</html>

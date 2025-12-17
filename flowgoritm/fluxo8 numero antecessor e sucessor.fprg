@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo8"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-15 04:19:59 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjA0OjAyOjM3ICI7MjU0Ng=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjA0OjE5OjU5ICI7MTsyNjY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira um n&#250;mero!&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;O antecessor desse n&#250;mero &#233;: &quot; &amp; num1 - 1 &amp; &quot; e o seu sucessor &#233;: &quot; &amp; num1 + 1 &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

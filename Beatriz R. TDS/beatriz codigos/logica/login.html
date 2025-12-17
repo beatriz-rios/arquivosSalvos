@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Senha</title>
+</head>
+
+<body>
+    <button>Clique para fazer o login</button>
+    <script>
+        let button = document.querySelector("button");
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+        let registroNome = prompt("Qual seu nome?");
+        let registroSenha = prompt("Qual a sua senha?");
+
+        function login() {
+            let loginNome = prompt("Qual seu nome?");
+            if (loginNome != registroNome) {
+                mostra("Por favor insira o nome correto");
+            }
+            if (loginNome == registroNome) {
+                let loginSenha = prompt("Qual sua senha?");
+                if (loginSenha != registroSenha) {
+                    mostra("Por favor coloque a senha válida");
+                }
+                if (loginSenha == registroSenha) {
+                    mostra("Você está logado");
+                }
+            }
+        }
+
+        button.onclick = login;
+
+    </script>
+
+</body>
+
+</html>

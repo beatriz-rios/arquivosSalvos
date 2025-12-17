@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Exemplos de Formulario em HTML</h1>
+    <h3>Exemplo 01</h3>
+    <form>
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="e-mail" name="email" placeholder="Email">
+        <input type="date" name="nascimento">
+        <input type="tel" name="usertel" placeholder="Celular">
+        <input type="password" name="senha" placeholder="Senha">
+        <input type="button" value="Cadastrar" onclick="cadastro()">
+    </form>
+    <h3>Exemplo 02</h3>
+
+    <form>
+
+        <textarea>"Texto livre</textarea>
+    </form>
+    <h3>Exemplo 03</h3>
+    <form>
+        <fieldset>
+            <legend>Formulário</legend>
+            Nome:<input type="text" name="nome"><br><br>
+            Sexo:<input type="radio" name="sex" value="Masculino">Masculino
+            <input type="radio" name="sex" value="Feminino">Feminino <br><br>
+
+            País:<select name="lista" id="pais">
+                <option>Selecione um país</option>
+                <option>Brasil</option>
+                <option>Inglaterra</option>
+                <option>Portugal</option>
+                <option>Austrália</option>
+            </select>
+            <br><br>
+            Mensagem:
+            <br>
+            <form>
+                <textarea></textarea>
+            </form>
+            <br>
+            <br>
+            <input type="checkbox" name="assinar" value="pergunta">Assinar Newsletter?
+            <br>
+            <br>
+            <input type="button" value="Enviar" onclick="msg()">
+        </fieldset>
+    </form>
+
+    <h3>Exemplo 04</h3>
+
+    <form method="GET" action="https://www.google.com/search" target="_blank">
+
+        <input type="search" name="q">
+        <input type="submit" value="Clique para pesquisar">
+    </form>
+    <script>
+        function msg() {
+            alert("Você enviou o formulário");
+
+        }
+        function cadastro() {
+            alert("Você realizou seu cadastro!");
+
+        }
+
+    </script>
+</body>
+
+</html>

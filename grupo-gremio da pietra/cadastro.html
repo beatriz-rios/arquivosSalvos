@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="_css/style.css">
+</head>
+
+<body>
+    <ul>
+        <li class="inicio"><a href="#">Inicio</a></li>
+        <li class="eventos"><a href="#">Eventos</a></li>
+        <li class="galeria"><a href="galeria.html">Galeria</a></li>
+        <li class="agenda"><a href="#">Agenda</a></li>
+
+        <li>
+            <h1>Cadastro</h1>
+        </li>
+        <img class="img-logo" src="_imagens/logo.png" alt="logo-app">
+    </ul>
+
+    <form action="/cadastrado.html" method="get">
+        <fieldset>
+            <div class="area1">
+                <label>NOME:</label>
+                <br>
+                <input type="text" name="nome" id="nome" required>
+                <p></p>
+                <label>EMAIL:</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+                <p></p>
+                <label>TELEFONE:</label>
+                <br>
+                <input type="number" name="telefone" id="telefone" required>
+                <p></p>
+                <label>IDADE:</label>
+                <br>
+                <input type="number" name="idade" id="idade" required>
+                <p></p>
+                <label>TURMA:</label>
+                <br>
+                <input type="text" name="turma" id="turma" required>
+                <p></p>
+            </div>
+
+            <div class="area2">
+                <label>ESPORTE FAVORITO:</label>
+                <br>
+                <input type="text" name="esporte" id="esporte" required>
+                <p></p>
+                <label>DESEJA RECEBER NOVIDADES?</label>
+                <br>
+
+                <label>Sim</label>
+                <input type="radio" name="escolha" id="sim" value="sim">
+                <label>Não</label>
+                <input type="radio" name="escolha" id="nao" value="não">
+
+                <br><br>
+                <div class="botao">
+                    <button type="submit" id="btn">CADASTRAR</button>
+
+                    <br><br>
+                    <input type="button" onclick="json()" value="Gerar JSON" id="btn">
+                </div>
+            </div>
+    </form>
+    </fieldset>
+    <script src="/json.js"></script>
+</body>
+
+</html>

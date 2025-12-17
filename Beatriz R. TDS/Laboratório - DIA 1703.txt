@@ -1,0 +1,23 @@
+Laboratório - DIA 17/03
+
+IPADRESS = $ ---> Variável Ambiente (variável temporária)
+rule : regra
+
+echo $IPADDRESS ----> acha o IP
+
+
+NUVEM AZURE - CONTINUAÇÃO DOS SLIDES
+
+banco de dados ---|
+blob - Microsoft
+Bucket - Google AWS
+
+camadas de acesso de armazenamento
+
+Frequente - hot
+arquivo morto - Archive 
+frio - could
+Esporádico
+
+IA = Machine Learning 
+aprendizado de maquina

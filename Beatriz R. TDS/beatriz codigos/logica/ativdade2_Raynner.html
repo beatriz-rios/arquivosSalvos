@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 do Raynner</title>
+</head>
+
+<body>
+    <script>
+        let frase = prompt("Digite uma Frase");
+
+        let palavra = frase.split(" ");
+
+
+
+        for (let orde = 0; orde <= palavra.length - 1; orde++) {
+            let letras = palavra[orde].split("");
+            document.write("<br>" + "Pacote  " + (orde + 1) + "     " + palavra[orde]);
+            for (let ordem = 0; ordem <= letras.length - 1; ordem++) {
+                document.write("<br>" + "     " + (orde + 1) + "." + (ordem + 1) + "     " + letras[ordem] + "<br>");
+            }
+        }
+        for (let ordenar = 0; ordenar <= palavra.length - 1; ordenar++) {
+            document.write("*" + palavra[ordenar] + "*");
+            let letra = palavra[ordenar].split("");
+            for (let ordinais = 0; ordinais <= letra.length - 1; ordinais++) {
+                document.write(" " + letra[ordinais] + "  ");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 do Raynner : Dados RG</title>
+</head>
+
+<body>
+    <script>
+        // alert("Este site e dividido por nomes, mas quando for adicionar os nome veja se esta na pessoa certa ");
+        let nome1 = prompt(" Pessoa 1 digite seu nome");
+        document.write(nome1 + " Estes sao seus dados"+"<br>");
+        let escrever1 = prompt( nome1 +" Digite Sim se voce for Alfabetizado");
+        let data1 = prompt(nome1 + " Digite sua data de nascimento" + "OBS:Digite usando // ex:28/10/2008");
+        let cpf1 = prompt(nome1 +" Digite seu cpf");
+        let validade1 = prompt( nome1 + " Digite a data de expediçao ");
+        let nascimento1 = data1.split("/");
+        let nasceu1 = nascimento1[2];
+        let nascido1 = parseInt(nascimento1);
+        let parido1 = 2025 - nasceu1;
+        
+        document.write("<br>"+"Sua data e = "+ data1+"<br> ");
+        document.write("Alfabetizado =" + escrever1 + "<br>");
+        document.write("seu CPF = " + cpf1 + "<br>");
+        document.write("A data de expediçao e = " + validade1+"<br>");
+
+        if (parido1 >= 18) {
+            document.write("<br>"+"Parabens  "+nome1+"  pode tirar sua CNH(Carteira De Motorista)"+"<br>");
+            
+        } else {
+            document.write("<br>"+"Infelizmente  "+nome1+"  nao pode tirar a CNH(Carteira de Motorista)"+"<br>");
+        }
+
+        let nome2 = prompt("Pessoa 2 igite seu nome");
+        document.write("<br>"+nome2 + "  Estes sao seus dados"+"<br>");
+        let escrever2 = prompt(nome2+ " Digite Sim se voce for Alfabetizado");
+        let data2 = prompt( nome2+" Digite sua data de nascimento" + "OBS:Digite usando // ex:28/10/2008");
+        let cpf2 = prompt(nome2+" Digite seu cpf");
+        let validade2 = prompt(nome2+" Digite a data de expediçao ");
+        let nascimento2 = data2.split("/");
+        let nasceu2 = nascimento2[2];
+        let nascido2 = parseInt(nascimento2);
+        let parido2 = 2025 - nasceu2;
+
+        document.write( "<br>"+"Sua data e = "+ data2+"<br>");
+        document.write("Alfabetizado =" + escrever2 + "<br>");
+        document.write("seu CPF = " + cpf2 + "<br>");
+        document.write("A data de expediçao e = " + validade2+"<br>");
+
+        if (parido2 >= 18) {
+            document.write("<br>"+"Parabens  "+nome2+ "  pode tirar sua CNH(Carteira De Motorista)"+"<br>");
+            
+        } else {
+            document.write("<br>"+"Infelizmente  "+nome2+ "  nao pode tirar a CNH(Carteira de Motorista)"+"<br>");
+        }
+       
+        let nome3 = prompt(" Pessoa 3 digite seu nome" );
+        document.write("<br>"+nome3 + " Estes sao seus dados"+"<br>" );
+        let escrever3 = prompt(nome3 +" Digite Sim se voce for Alfabetizado");
+        let data3 = prompt(nome3+" Digite sua data de nascimento" + "OBS:Digite usando // ex:28/10/2008");
+        let cpf3 = prompt(nome3+" Digite seu cpf");
+        let validade3 = prompt(nome3+" Digite a data de expediçao ");
+        let nascimento3 = data3.split("/");
+        let nasceu3 = nascimento3[2];
+        let nascido3 = parseInt(nascimento3);
+        let parido3 = 2025 - nasceu3;
+
+    
+        document.write("<br>"+"Sua data e = "+ data3+"<br>");
+        document.write("Alfabetizado =" + escrever3 + "<br>");
+        document.write("seu CPF = " + cpf3 + "<br>");
+        document.write("A data de expediçao e = " + validade3+"<br>");
+
+        if (parido3 >= 18) {
+            document.write("<br>"+"Parabens  "+nome3 +"  pode tirar sua CNH(Carteira De Motorista)"+"<br>");
+            
+        } else {
+            document.write("<br>"+"Infelizmente  "+ nome3 +"  nao pode tirar a CNH(Carteira de Motorista)"+"<br>");
+        }
+
+
+
+
+
+
+        // // document.write(nome1 + "   essa sao as suas informaçoes " + "<br>");
+        // document.write("Alfabetizado =" + escrever1 + "<br>");
+        // document.write("Sua data de nascimento = " + data1 + "<br>");
+        // document.write("seu CPF = " + cpf1 + "<br>");
+        // document.write("A data de expediçao e = " + validade1);
+        
+       
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <h1>Página de Estudos</h1>
+    <hr>
+    <hr>
+    <!--form formulario e como uma div ou section-->
+    <!--action enviar. get pegar-->
+    <form method="get" action="envio_dados.php">
+        <!--text texto-->
+        <!--email e para adicionar o gmail-->
+        <!--submit e para mandar ou enviar-->
+        <input type="text" name="nome" placeholder="digite seu Nome aqui">
+        <input type="e-mail" name="email" placeholder="Digite seu e-mail">
+        <input type="submit" name="enviar" value="Enviar">
+        <hr>
+        <input type="button" value="Clique Aqui" onclick="msg()">
+        <hr>
+        <!--input radio e a bolinha -->
+        <!--radio so pode escolher uma opçao-->
+        <input type="radio" name="veiculo1" value="bicicleta">Eu tenho uma bicicleta<br>
+        <!--checkbpx quadradinho-->
+        <input type="checkbox" name="veiculo2" value="carro">Eu tenho carro<br>
+        <input type="checkbox" name="veiculo3" value="moto">Eu tenho uma moto
+        <hr>
+        <!--color para ecolher cor-->
+        <input type="color" name="favcor" value="#000FF">
+        <hr>
+        <!--date e para adicionar uma data-->
+        <input type="date" name="nascimento">
+        <hr>
+        <!--datetime data e hora-->
+        <input type="datetime-local" name="bdaytime">
+        <hr>
+        <!--file escolher 1  arquivo-->
+        <!--file com multipe e para mandar varios arquivos-->
+        <input type="file" name="arquivo">
+        <br><br><br>
+        <input type="file" name="arquivo" multiple>
+        <hr>
+        <input type="month" name="mes">
+        <hr>
+        <!--number numeros tem como colocar um min e um max para os numeros-->
+        <input type="number" name="quantidade" min="1" max="5">
+        <hr>
+        <!--placeholder coloca o nome dentro do input-->
+        <input type="password" name="senha" placeholder="Digite sua Senha">
+        <hr>
+        <input type="radio" name="idade" value="18_22">18 a 22 <br>
+        <input type="radio" name="idade" value="23_30">23 a 30 <br>
+        <input type="radio" name="idade" value="mais31">acima de 31 <br>
+        <hr>
+        <!--range e uma porcentagem que voce coloca-->
+        <!--no range tambem tem como colocar max e min -->
+        pouco satisfeito<input type="range" name="satisfacao" min="0" max="10">muito satisfeito
+        <hr>
+        <!--search para pesquisa-->
+        <input type="search" name="q">
+        <input type="submit" value="Enviar Formulário">
+        <hr>
+        <!--tel e para telefone-->
+        Telefone:<input type="tel" name="usertel">
+        <hr>
+        <!--time escolher a hora-->
+        <input type="time" name="usr_horario">
+        <hr>
+    </form>
+    <form>
+        <hr>
+        <!--label etiqueta-->
+        <label for="email">Digite seu e-mail</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="pin">Digite seu código</label>
+        <!--maxlength dar um maximo de caracter-->
+        <input type="text" id="pin" name="pin" maxlength="4"><br><br>
+        <!--reset para apagar oque tinha nos cambus-->
+        <input type="reset" value="reset">
+        <!--submit e o botao -->
+        <input type="submit" value="submit">
+        <hr>
+    </form>
+    <!-- input retanfulo retangulo-->
+    <!--month mes -->
+    <!--pra colocar uma mensagem antes ou dps do input e so colocar a mensagem antes ou dps do <>-->
+    <form>
+        <textarea></textarea>
+        <textarea>Area de texto com um texto inicial dentro</textarea>
+    </form>
+    <select name="lista" id="lista">
+
+        <option>Selecione uma opção</option>
+        <option>Macarrão</option>
+         <option>Pizza</option>
+          <option>Nhoque</option>
+           <option>Canelone</option>
+
+    </select>
+    <fieldset>
+        <legend>Formulário</legend>
+    </fieldset>
+    <script>
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        //funçao do botao 
+        function msg() {
+            alert("Voce clicou no botão!");
+        }
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+
+</html>

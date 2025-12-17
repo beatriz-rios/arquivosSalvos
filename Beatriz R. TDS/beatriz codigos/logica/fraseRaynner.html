@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Frase do Raynner</title>
+</head>
+
+<body>
+    <script>
+        function mostra(frase) {
+            document.write(frase);
+        }
+
+        let palavras = prompt("Digite algo que você goste!");
+        mostra(palavras+"<br>");
+
+        let letras = palavras.split("");
+
+
+        for (let dividir = 0; dividir <= letras.length - 1; dividir++) {
+
+            mostra("Pacote " + dividir +" "+ letras[dividir] + "<br>");
+        }
+
+        for (let dividir = letras.length-1; dividir >= 0; dividir--) {
+            mostra(letras[dividir]);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

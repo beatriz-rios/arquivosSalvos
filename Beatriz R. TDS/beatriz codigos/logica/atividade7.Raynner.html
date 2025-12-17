@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7 do Raynner: Código do Matheus e Kauã</title>
+</head>
+<style>
+    body {
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(105, 32, 32);
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <script>
+        let soldados = alert("Neste Tiro de Guerra há 20 soldados atiradores!");
+        let soldado = prompt("Digite o nome do soldado: ");
+        let faltas = parseInt(prompt("Digite quantas faltas o soldado teve para com o seu dever: (Ex:1, 2, 30...)"));
+        let pontos = 2;
+        let totalPontos = faltas * pontos;
+
+        let continuar = true;
+
+        while (continuar == true) {
+            if (totalPontos >= 20) {
+                document.write("O(a) " + soldado + " tem " + totalPontos + " pontos...FAÇA 10 FLEXIÇÕES COMO PUNIÇÃO SOLDADO IRRESPONSÁVEL!!!");
+                break;
+            }
+            else {
+                document.write("O(a) " + soldado + " tem " + totalPontos + " pontos... Dessa vez passa soldado...MAS FICA ESPERTO!");
+                break;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

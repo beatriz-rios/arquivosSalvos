@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5 do Raynner</title>
+</head>
+
+<body>
+    <script>
+
+
+        alert("Cardápio do dia");
+
+        let comida = alert("1 - Frango com Batata Frita - R$30,00\n" +
+            "2 - Strogonoff de Carne - R$30,00\n" +
+            "3 - Lasanha à Bolonhesa - R$30,00\n" +
+            "4 - Pizza de Calabresa - R$30,00\n" +
+            "5 - Salmão Grelhado - R$50,00");
+
+        let desconto = prompt("Quanto % de desconto esse item tem?");
+        let precoFinal = 0;
+        let continuar = true;
+        let descontado = (comida * desconto) / 100;
+
+        let preco = 0;
+
+        let numero = prompt("digite o numero do pedido ou 0 para finalizar");
+        let prato = parseInt(numero);
+
+        for (precoFinal >= 150; precoFinal = descontado; precoFinal++);
+        if (prato === 0) {
+            continuar = false;
+        } else {
+            preco = 0;
+
+            if (prato === 1) {
+                preco = 30;
+            }
+            if (prato === 2) {
+                preco = 30;
+            }
+            if (prato === 3) {
+                preco = 30;
+            }
+            if (prato === 4) {
+                preco = 30;
+            }
+            if (prato === 5) {
+                preco = 50;
+            }
+
+
+        }
+
+
+        precoFinal = precoFinal + preco;
+
+
+
+
+        document.write("O valor total da compra ficou R$" + precoFinal + "reais");
+
+    </script>
+</body>
+
+</html>

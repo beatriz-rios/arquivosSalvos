@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando um objeto</title>
+  
+</head>
+
+<body>
+    <h2>Criando um JSON String</h2>
+    <p id="demo"></p>
+    <script>
+        const jsonString = `{
+        "alunos" : [
+            {"firstName": "John", "lastName": "Travolta"},
+            {"firstName" : "Anna", "lastName": "Hatway"},
+            {"firstName": "Peter", "lastName": "Parker"}
+            
+        ]
+    }`;
+
+    const jsonObject = JSON.parse(jsonString);
+    const alunoArray = jsonObject.alunos[2];
+    const fullName = alunoArray.firstName + " " + alunoArray.lastName;
+    document.getElementById("demo").textContent = fullName;
+
+    //json.parse() converte para string
+    </script>
+</body>
+
+</html>

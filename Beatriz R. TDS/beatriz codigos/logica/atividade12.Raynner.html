@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batalha Naval Multiplayer</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: rgb(13, 124, 132);
+      font-family: sans-serif;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 20px;
+      height: 20px;
+      border: 1px solid white;
+      cursor: pointer;
+    }
+
+    td:hover {
+      background-color: yellow;
+    }
+
+    .acerto {
+      background-color: green !important;
+    }
+
+    .tentado {
+      background-color: red;
+    }
+
+    h4,
+    p,
+    pre {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h4>🚢 Simulador de Batalha Naval 💣</h4>
+  <p id="mensagem">Quantos jogadores? (máximo 5)</p>
+  <button onclick="iniciarJogo()">Começar</button>
+  <pre id="placar"></pre>
+  <table id="tabuleiro"></table>
+
+  <script>
+    const tamanho = 50;
+    const maxTentativas = 20;
+    const maxJogadores = 5;
+    let xis, yes;
+    let jogadores = 0;
+    let tentativasPorJogador = [];
+    let jogadorAtual = 0;
+    let jogoAtivo = false;
+
+    const mensagem = document.getElementById('mensagem');
+    const placar = document.getElementById('placar');
+    const tabuleiro = document.getElementById('tabuleiro');
+
+    // Cria a tabela (fixa)
+    for (let i = 0; i < tamanho; i++) {
+      const linha = tabuleiro.insertRow();
+      for (let j = 0; j < tamanho; j++) {
+        const celula = linha.insertCell();
+        celula.dataset.linha = i;
+        celula.dataset.coluna = j;
+        celula.addEventListener('click', jogar);
+      }
+    }
+
+    function iniciarJogo() {
+      jogadores = parseInt(prompt("Quantos jogadores? (1 a 5)"));
+      if (isNaN(jogadores) || jogadores < 1 || jogadores > maxJogadores) {
+        alert("Número inválido. Escolha de 1 a 5.");
+        return;
+      }
+
+      
+      tentativasPorJogador = Array(jogadores).fill(0);
+      jogadorAtual = 0;
+      jogoAtivo = true;
+      xis = Math.floor(Math.random() * tamanho);
+      yes = Math.floor(Math.random() * tamanho);
+      console.log("Alvo -> Linha:", xis, " Coluna:", yes);
+
+      mensagem.textContent = `🎮 Jogador 1, é sua vez!`;
+      placar.textContent = "";
+      resetarTabuleiro();
+    }
+
+    function resetarTabuleiro() {
+      for (let linha of tabuleiro.rows) {
+        for (let celula of linha.cells) {
+          celula.classList.remove("acerto", "tentado");
+        }
+      }
+    }
+
+    function jogar(event) {
+      if (!jogoAtivo) {
+        alert("Clique em 'Começar' para iniciar o jogo.");
+        return;
+      }
+
+      const celula = event.target;
+      const linha = parseInt(celula.dataset.linha);
+      const coluna = parseInt(celula.dataset.coluna);
+
+    
+      if (celula.classList.contains("acerto") || celula.classList.contains("tentado")) {
+        alert("Já tentaram essa posição.");
+        return;
+      }
+
+      const tentativas = ++tentativasPorJogador[jogadorAtual];
+
+      if (linha === xis && coluna === yes) {
+        celula.classList.add("acerto");
+        mensagem.textContent = `🎉 Jogador ${jogadorAtual + 1} venceu com ${tentativas} tentativa(s)!`;
+        alert(`🏆 Jogador ${jogadorAtual + 1} venceu!`);
+        jogoAtivo = false;
+        return;
+      } else {
+        celula.classList.add("tentado");
+
+        let dicaLinha = Math.abs(xis - linha);
+        let dicaColuna = Math.abs(yes - coluna);
+
+        let mensagemLinha = dicaLinha === 0 ? "Acertou a linha!" :
+          dicaLinha <= 5 ? "Perto da linha!" :
+          dicaLinha <= 15 ? "A caminho da linha!" : "Longe da linha.";
+        let mensagemColuna = dicaColuna === 0 ? "Acertou a coluna!" :
+          dicaColuna <= 5 ? "Perto da coluna!" :
+          dicaColuna <= 15 ? "A caminho da coluna!" : "Longe da coluna.";
+
+        alert(`Jogador ${jogadorAtual + 1} -> ${mensagemLinha} ${mensagemColuna}`);
+
+        if (tentativas >= maxTentativas) {
+          alert(`❌ Jogador ${jogadorAtual + 1} esgotou suas tentativas.`);
+        }
+
+        jogadorAtual = (jogadorAtual + 1) % jogadores;
+
+        
+        const todosPerderam = tentativasPorJogador.every(t => t >= maxTentativas);
+        if (todosPerderam) {
+          mensagem.textContent = `💀 Todos os jogadores perderam. O navio estava na linha ${xis} e coluna ${yes}.`;
+          alert("Fim de jogo. Todos perderam.");
+          jogoAtivo = false;
+          return;
+        }
+
+        mensagem.textContent = `🎮 Jogador ${jogadorAtual + 1}, é sua vez!`;
+        atualizarPlacar();
+      }
+    }
+
+    function atualizarPlacar() {
+      let texto = "Tentativas:\n";
+      tentativasPorJogador.forEach((t, i) => {
+        texto += `Jogador ${i + 1}: ${t}/${maxTentativas}\n`;
+      });
+      placar.textContent = texto;
+    }
+  </script>
+</body>
+
+</html>

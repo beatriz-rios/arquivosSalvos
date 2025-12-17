@@ -1,0 +1,205 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset1 Segoe UI Symbol;}}
+{\colortbl ;\red255\green0\blue0;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs24\lang22\par
+\ul\b NOME: BEATRIZ RIOS \ulnone\b0\fs22\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\ul\b\fs32 An\'e1lise de Requisitos\b0\fs22\par
+
+\pard\sa200\sl276\slmult1\ulnone Fazer um c\'f3digo de um site que venda alguns produtos de cosm\'e9ticos, onde mostre os produtos dispon\'edveis na loja, e seus respectivos pre\'e7os, ao final da compra mostre a quantidade de produtos que o cliente comprou, a forma de pagamento e o valor total da compra.\par
+1- Tenha uma mensagem de boas vindas para o cliente.\par
+2 - que na tela apare\'e7a os produtos dispon\'edveis no site e seus pre\'e7os\par
+3 - Tenha um bot\'e3o para o cliente fazer a compra.\par
+4 - Que o cliente possa escolher qual produto comprar, e quantidade que desejar, e que possa escolher mais de um produto.\par
+5 - Que o cliente possa encerrar a compra quando quiser, para ir para a forma de pagamento.\par
+6 - que tenha forma de pagamento em d\'e9bito, cr\'e9dito e que possar parcelar caso a op\'e7\'e3o for cr\'e9dito.\par
+7 -  finalize a compra mostrando a quantidade de produto e quanto ficou no total na tela.\par
+
+\pard\sa200\sl276\slmult1\qc\b\par
+PONTOS A SE USAR NO C\'d3DIGO\b0\par
+
+\pard\sa200\sl276\slmult1\f1\bullet  Use array para mostrar a lista de produtos se desejar\par
+\bullet\f0\lang1046  \f1\lang22 Use if , else ou else if\par
+\bullet  While ou for\par
+\bullet  Crie um bot\f0\'e3o para fazer a compra\par
+\f1\bullet\f0\lang1046  \f1\lang22 Use prompt para escolher os produtos, a quantidade e a forma de pagamento.\par
+\bullet  Coloque uma foto de fundo, e use um pouco de CSS para decora\f0\'e7\'e3o e deixar o site bonito.\par
+\f1\bullet  Usar vari\f0\'e1veis para produtos,  total da compra, parcelamento, e forma de pagamento .\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\cf1\ul\b C\'d3DIGO\cf0\ulnone\par
+\par
+
+\pard\sa200\sl276\slmult1 <!DOCTYPE html>\par
+<html lang="pt-br">\par
+\par
+<head>\par
+    <meta charset="UTF-8" />\par
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\par
+    <title>\f2\u-10179?\u-9084?\f0 Cosmetcs Rios</title>\par
+    <style>\par
+        body::before \{\par
+            content: "";\par
+            position: fixed;\par
+            top: 0;\par
+            left: 0;\par
+            width: 100%;\par
+            height: 100%;\par
+            background-image: url("https://ogimg.infoglobo.com.br/in/16871453-0f8-399/FT1086A/760/verao-perfume.jpg");\par
+            background-repeat: no-repeat;\par
+            background-size: cover;\par
+            background-position: center;\par
+            transform: scaleX(-1);\par
+            z-index: -1;\par
+        \}\par
+\par
+        body \{\par
+            color: white;\par
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);\par
+            font-family: Arial, sans-serif;\par
+            margin: 0;\par
+            padding: 20px;\par
+            min-height: 100vh;\par
+            position: relative;\par
+        \}\par
+\par
+        button \{\par
+            padding: 10px 20px;\par
+            font-size: 16px;\par
+            border-radius: 5px;\par
+            border: none;\par
+            background-color: rgba(255, 255, 255, 0.8);\par
+            color: #333;\par
+            transition: background-color 0.3s ease;\par
+        \}\par
+\par
+        #resultado \{\par
+            margin-top: 20px;\par
+            background-color: rgba(0, 0, 0, 0.5);\par
+            padding: 15px;\par
+            border-radius: 8px;\par
+            max-width: 600px;\par
+        \}\par
+    </style>\par
+</head>\par
+\par
+<body>\par
+    <h1>\f2\u-10179?\u-9066?\f0 Cosmetics Rios\f2\u-10179?\u-9084?\f0 </h1>\par
+    <button onclick="iniciarCompra()">Iniciar Compra</button>\par
+    <div id="resultado"></div>\par
+\par
+    <script>\par
+        let produtos = [\par
+            \{ nome: "Perfume", preco: 150 \},\par
+            \{ nome: "Batom", preco: 30 \},\par
+            \{ nome: "Creme facial", preco: 80 \},\par
+            \{ nome: "Shampoo", preco: 50 \},\par
+            \{ nome: "Maquiagem completa", preco: 300 \}\par
+        ];\par
+\par
+        window.onload = function () \{\par
+            alert("Bem-vindo \'e0 nossa Loja de Cosm\'e9ticos! Aproveite as ofertas.");\par
+            exibirProdutos();\par
+        \};\par
+\par
+        function exibirProdutos() \{\par
+            let lista = ("<b>Produtos dispon\'edveis:</b><br>");\par
+            for (let i = 0; i < produtos.length; i++) \{\par
+                lista += "- " + produtos[i].nome + " (R$ " + produtos[i].preco + ")<br>";\par
+\par
+            \}\par
+            document.getElementById("resultado").innerHTML = lista;\par
+        \}\par
+\par
+        function iniciarCompra() \{\par
+            let totalCompra = 0;\par
+            let resumo = "<br><b>Resumo da Compra:</b><br>";\par
+\par
+            while (true) \{\par
+                let produtoEscolhido = prompt("Digite o nome do produto(ou 'fim' para encerrar):");\par
+\par
+                if (!produtoEscolhido) \{\par
+                    break;\par
+                \} else if (produtoEscolhido.toLowerCase() === "fim") \{\par
+                    break;\par
+                \}\par
+\par
+\par
+                let quantidade = parseInt(prompt("Quantos " + produtoEscolhido + " voc\'ea deseja comprar?"));\par
+\par
+\par
+                if (isNaN(quantidade) || quantidade <= 0) \{\par
+                    alert("Quantidade inv\'e1lida. Tente novamente.");\par
+                    continue;\par
+                \}\par
+\par
+                let produto;\par
+                for (let i = 0; i < produtos.length; i++) \{\par
+                    if (produtos[i].nome.toLowerCase() === produtoEscolhido.toLowerCase()) \{\par
+                        produto = produtos[i];\par
+                        break; // Para ao encontrar o produto\par
+                    \}\par
+                \}\par
+\par
+                if (produto) \{\par
+                    let subtotal = produto.preco * quantidade;\par
+                    totalCompra += subtotal;\par
+                    resumo += quantidade + " x " + produto.nome + " = R$ " + subtotal + "<br>";\par
+                \} else \{\par
+                    alert("Produto '" + produtoEscolhido + "' n\'e3o encontrado.");\par
+\par
+                \}\par
+            \}\par
+\par
+            if (totalCompra === 0) \{\par
+                alert("Nenhum produto foi comprado.");\par
+                return;\par
+            \}\par
+\par
+            let formaPagamento = prompt("Forma de pagamento (D\'e9bito ou Cr\'e9dito)?").toLowerCase();\par
+            let formaTexto;\par
+            if (formaPagamento === "cr\'e9dito" || formaPagamento === "d\'e9bito") \{\par
+                formaTexto = formaPagamento;\par
+            \} else \{\par
+                formaTexto = "forma desconhecida";\par
+            \}\par
+\par
+            resumo += "<br><b>Total da compra:</b> R$ " + totalCompra + "<br>";\par
+            resumo += "<b>Forma de pagamento:</b> " + formaTexto + "<br>";\par
+\par
+\par
+            if (formaTexto === "cr\'e9dito") \{\par
+                let parcelar = confirm("Deseja parcelar a compra?");\par
+                if (parcelar) \{\par
+                    let parcelas = parseInt(prompt("Em quantas vezes deseja parcelar? (at\'e9 12x):"));\par
+\par
+                    if (!isNaN(parcelas) && parcelas > 1 && parcelas <= 12) \{\par
+                        let valorParcela = totalCompra / parcelas;\par
+                        resumo += "<b>Parcelado em:</b> " + parcelas + "x de R$ " + valorParcela + "<br>";\par
+                    \} else \{\par
+                        resumo += "<em>Parcelamento n\'e3o aplicado (entrada inv\'e1lida).</em><br>";\par
+\par
+                    \}\par
+                \}\par
+            \}\par
+\par
+            document.getElementById("resultado").innerHTML += resumo;\par
+        \}\par
+    </script>\par
+</body>\par
+\par
+</html>\b0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ano = 2025;
+        let nome1 = "Roberto";
+        let nome2 = "Beatriz";
+        let nome3 = "Nahyron";
+        let idadeRoberto = 37;
+        let idadeBeatriz = 20;
+        let idadeNahyron = 17;
+
+        function puloLinha() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase)
+            puloLinha();
+        }
+
+        mostra("A idade de " + nome1 + " é " + idadeRoberto);
+
+        mostra("A idade de" + nome2 + " é " + idadeBeatriz);
+
+        mostra("A idade de " + nome3 + " é " + idadeNahyron);
+
+        let média = (idadeRoberto + idadeBeatriz + idadeNahyron) / 3;
+        //A linha abaixo calcula as medias das idades.
+        mostra("A média das idades é " + Math.round(média));
+        (puloLinha);
+        mostra(Math.round(3 / 4));
+    
+    </script>
+</body>
+
+</html>

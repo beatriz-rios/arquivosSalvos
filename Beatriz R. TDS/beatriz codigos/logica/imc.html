@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC (Indice de Massa Corporal)</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaImc(altura, peso) {
+            return Math.round (peso / (altura * altura));
+
+        }
+
+        let imcRoberto = calculaImc(1.71, 73);
+        let imcAmigo = calculaImc(1.72, 68);
+        let totalImc = imcRoberto + imcAmigo;
+
+        mostra("A soma dos imc's é " + Math.round (totalImc));
+
+    </script>
+</body>
+
+</html>

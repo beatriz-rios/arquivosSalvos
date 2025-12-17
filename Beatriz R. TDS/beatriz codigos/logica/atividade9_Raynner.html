@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9 do Raynner - consulta médica</title>
+</head>
+<style>
+    body {
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(25, 22, 156);
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <h1>Bem vindo(a) Clínica do SENAI</h1>
+    <h3>Marque sua consulta por convênio ou particular!</h3>
+    <script>
+        function mostra(frase) {
+            document.write(frase);
+        }
+        let paciente = prompt("Qual o nome do paciente?");
+        document.write("Nome do(a) paciente: " + paciente + "<br>");
+        let idade = prompt("Qual a idade do paciente?");
+        document.write("Idade do(a) paciente: " + idade + "<br>");
+        let cidade = prompt("Em que cidade o paciente mora? ");
+        document.write("Cidade em que o(a) paciente reside: " + cidade + "<br>");
+        let medico = prompt("Qual médico o paciente deseja marcar consulta? Lembrando que em nossa clínica há apenas 3 especializações: Psicólogo, Dentista e Pediatra.");
+        document.write("Médico em que a consulta foi marcada: " + medico + "<br>");
+
+
+        let exame = prompt(("O paciente deseja fazer algum exame? Obs: Se SIM cada exame tem um valor de R$37,00"));
+        if (exame = "sim") {
+            alert("Em seguida informe quantos exames o paciente fará.");
+        } else {
+            alert("Escolha a forma da consulta!")
+        }
+
+        let exame1 = 30;
+        let exame2 = 80;
+        let exame3 = 100;
+        let exame4 = 150;
+
+        let quantdExame = prompt("Digite a quantidade de exames que o paciente irá fazer: Ex: 1, 2, 3.");
+        if (quantdExame == "1") {
+            mostra("O valor total de um exame é: R$ " + exame1 + ",00" + "<br>");
+        } else if (quantdExame == "2") {
+            mostra("O valor total de dois exames é: R$ " + exame2 + ",00" + "<br>");
+        } else if (quantdExame == "3") {
+            mostra("O valor total de três exames é: R$ " + exame3 + ",00" + "<br>");
+        } else if (quantdExame == "4") {
+            mostra("O valor total de quatro exames é: R$ " + exame4 + ",00" + "<br>");
+        } else {
+            alert("O paciente só pode fazer até 4 exames");
+        }
+
+
+
+        let convenios = ['convenio1', 'convenio2', 'convenio3', 'particular'];
+
+        for (let i = 0; i < 1; i++) {
+            let nome;
+            let valor;
+            let convenio = prompt("A consulta será por convênio ou particular? Se for por convênio atendemos pelos seguintes: convênio1, convênio2, e convênio3");
+            if (convenio == "convenio1") {
+                mostra("O valor da consulta pelo convênio1 é 300");
+            } else if (convenio == "convenio2") {
+                mostra("O valor da consulta pelo convênio2 é 600")
+            } else if (convenio == "convenio3") {
+                mostra("O valor da consulta pelo convênio3 é  250");
+            } else if (convenio == "particular") {
+                mostra("O valor da consulta particular é  1000");
+            } else {
+                alert("Digitou o convênio errado...");
+                break;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

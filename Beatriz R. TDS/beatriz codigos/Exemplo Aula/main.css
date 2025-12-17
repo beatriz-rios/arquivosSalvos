@@ -1,0 +1,13 @@
+h1{
+    background-color: aqua;
+}
+h2{
+    background-color: darkorange;
+}
+body{
+    background-image: url("https://www.sp.senai.br/images/senai.svg");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}

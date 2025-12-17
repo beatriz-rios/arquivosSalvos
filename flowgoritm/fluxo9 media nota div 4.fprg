@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo9"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-15 04:38:13 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjA0OjIwOjAxICI7MjUzNw=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjA0OjM4OjEzICI7MjsyNjU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota1, nota2, nota3, nota4" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira a primeira nota.&quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Insira a segunda nota.&quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;Insira a terceira nota.&quot;" newline="True"/>
+            <input variable="nota3"/>
+            <output expression="&quot;Insira a quarta nota.&quot;" newline="True"/>
+            <input variable="nota4"/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <assign variable="media" expression="nota1 + nota2 + nota3 + nota4 / 4"/>
+            <output expression="&quot;O resultado &#233;: &quot; &amp; media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

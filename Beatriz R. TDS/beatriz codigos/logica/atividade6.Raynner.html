@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6 do Raynner - Biblioteca</title>
+    <style>
+        body {
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(145, 200, 236);
+        }
+        
+    </style>
+</head>
+
+<body id="MudarCores">
+<button onclick="mudaCor()">Mudar cor de fundo</button>
+    <button onclick="tudo()">Escolha um livro</button>
+    <script>
+        teste = 0;
+        qtd = 0;
+        res = "";
+        function mudaCor(){
+           document.getElementById("MudarCores").style="background-color:purple"
+        }
+        function pula() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+            pula();
+        }
+        function tudo() {
+            let nome = prompt("Qual o nome do livro?");
+            let autor = prompt("Qual nome do autor?");
+            let categoria = prompt("Qual categoria o livro se enquadra?(Ex:fantasia, mistério, ciêntifico,etc.)");
+            let dataRetirada = prompt("Qual a data de retirada?");
+            let dataDevolucao = prompt("Qual a data de devolução?");
+            let diasUso = prompt("Quantos dias que você ficará com o livro?");
+
+            mostra("Livro: " + nome);
+            mostra("Autor(a): " + autor);
+            mostra("Categoria: " + categoria);
+            mostra("Data de Retirada: " + dataRetirada);
+            mostra("Data de Devolução: " + dataDevolucao);
+            mostra("Total de dias que ficará com o livro: " + diasUso);
+
+
+            let livroRepetido = parseInt(prompt("Quantos Livros de " + nome + " tem repetido?"));
+            // for (i = 0; i <= 20; i++) {
+            if (livroRepetido > 2) {
+                console.log(livroRepetido)
+                qtd = livroRepetido;
+                // alert("Está disponível "+ livroRepetido +" exemplares desse livro na biblioteca.");
+                for (let i = 0; i < livroRepetido; i++) {
+                    if (qtd == 2) {
+                        console.log("ta chegando aq");
+                        teste = i;
+                        res += "<br> Podem ser retirados até " + teste + " livros";
+                        res += ("<br> Lembrete: Por favor avise ao leitor para devolver o livro na data correta, caso se atrase na devolução ele(a) terá que pagar uma multa!");
+                        break;
+                    }
+                    qtd--
+                }
+            }
+
+            else if (livroRepetido == 2) {
+                res += ("A Biblioteca tem apenas 2 livros, e não podera te emprestar")
+            } else if (livroRepetido == 1) {
+                res += ("A Biblioteca tem apenas 1 livro, e não podera te emprestar")
+            } else {
+                res += ("No momento esse livro não está disponível, espere outro leitor devolve-lo, mas fique a vontade para explorar a biblioteca e conhecer outros livros!");
+                // break;
+            }
+
+            mostra(res)
+        }
+    </script>
+</body>
+
+</html>

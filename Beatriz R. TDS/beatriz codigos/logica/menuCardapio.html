@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio de Restaurante</title>
+</head>
+
+<body>
+
+
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(cardapio) {
+            document.write(cardapio)
+            pulaLinha();
+        }
+
+
+
+        alert("Cardápio do dia");
+
+        alert("1 - Frango com Batata Frita - R$25,00\n" +
+            "2 - Strogonoff de Carne - R$30,00\n" +
+            "3 - Lasanha à Bolonhesa - R$28,00\n" +
+            "4 - Pizza de Calabresa - R$40,00\n" +
+            "5 - Salmão Grelhado - R$45,00\n" +
+            "6 - Macarrão à Carbonara- R$22,00\n" +
+            "7 - Hambúrguer Artesanal- R$35,00");
+
+        let precoFinal = 0;
+        let continuar = true;
+
+        while (continuar) {
+            let numero = prompt("digite o numero do pedido ou 0 para finalizar");
+            let prato = parseInt(numero);
+
+            if (prato === 0) {
+                continuar = false;
+            } else {
+                let preco = 0;
+
+            if (prato === 1) {
+                preco = 25;
+            }
+            if (prato === 2) {
+                preco = 30;
+            }
+            if (prato === 3) {
+                preco = 28;
+            }
+            if (prato === 4) {
+                preco = 40;
+            }
+            if (prato === 5) {
+                preco = 45;
+            }
+            if (prato === 6) {
+                preco = 22;
+            }
+            if (prato === 7) {
+                preco = 35;
+            }
+            precoFinal = precoFinal + preco;
+
+
+        }
+    }
+        mostra("O valor total da compra ficou R$" + precoFinal + "reais");
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo11"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-15 05:21:46 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjA0OjU4OjQ5ICI7MjU2MA=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjA1OjIxOjQ2ICI7MTsyNjU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Dados do funcion&#225;rio!&quot;" newline="True"/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <output expression="&quot;Digite o nome do funcion&#225;rio!&quot;" newline="True"/>
+            <input variable="nome"/>
+            <declare name="quantHr" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite a quantidade de horas trabalhadas!&quot;" newline="True"/>
+            <input variable="quantHr"/>
+            <declare name="valorHr" type="Real" array="False" size=""/>
+            <output expression="&quot;Quantidade de quanto o funcion&#225;rio ganha por hora.&quot;" newline="True"/>
+            <input variable="valorHr"/>
+            <output expression="&quot;O sal&#225;rio do funcion&#225;rio &quot; &amp; nome &amp; &quot; &#233; R$&quot; &amp; quantHr * valorHr" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

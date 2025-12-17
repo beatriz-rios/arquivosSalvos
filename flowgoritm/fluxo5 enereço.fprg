@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo5"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-13 05:23:48 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTM7IjA1OjEwOjIyICI7MjUzOA=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTM7IjA1OjIzOjQ4ICI7MTsyNjU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rua" type="String" array="False" size=""/>
+            <output expression="&quot;Digite o nome da rua&quot;" newline="True"/>
+            <input variable="rua"/>
+            <declare name="bairro" type="String" array="False" size=""/>
+            <output expression="&quot;Digite o nome do bairro&quot;" newline="True"/>
+            <input variable="bairro"/>
+            <declare name="cidade" type="String" array="False" size=""/>
+            <output expression="&quot;Digite o nome da cidade&quot;" newline="True"/>
+            <input variable="cidade"/>
+            <declare name="numCasa" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o n&#250;mero da casa&quot;" newline="True"/>
+            <input variable="numCasa"/>
+            <output expression="&quot;O endere&#231;o digtado &#233; o seguinte: &quot; &amp; rua &amp; &quot; &quot; &amp; &quot; &quot; &amp; bairro &amp; &quot; &quot; &amp; cidade &amp; &quot; &quot; &amp; numCasa" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

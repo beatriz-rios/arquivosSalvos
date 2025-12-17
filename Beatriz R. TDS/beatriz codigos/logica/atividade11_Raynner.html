@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11 do Raynner: Pedra, Papel e Tesoura - 3 Jogadores</title>
+</head>
+
+<body>
+    <h2>🎲Jogo Pedra, Papel e Tesoura - 3 Jogadores✂ 📃 ● </h2>
+    <button onclick="jogar()">Jogar Rodada</button>
+    <pre id="placar"></pre>
+
+    <script>
+        let opcoes = ["pedra", "papel", "tesoura"];
+        let placar = { Jogador1: 0, Jogador2: 0, Jogador3: 0, Empates: 0 };
+
+        function pedirJogada(jogador) {
+            let escolha = prompt("Jogador " + jogador + ", escolha pedra, papel ou tesoura:");
+            while (escolha !== "pedra" && escolha !== "papel" && escolha !== "tesoura") {
+                escolha = prompt("Entrada inválida! Jogador " + jogador + ", escolha pedra, papel ou tesoura:");
+            }
+            return escolha;
+        }
+
+        function jogar() {
+            let j1 = pedirJogada(1);
+            let j2 = pedirJogada(2);
+            let j3 = pedirJogada(3);
+
+            alert("Jogadas:\nJogador 1: " + j1 + "\nJogador 2: " + j2 + "\nJogador 3: " + j3);
+
+            if (j1 === j2 && j2 === j3) {
+                alert("Empate! Todos escolheram " + j1);
+                placar.Empates++;
+            } else if (j1 !== j2 && j2 !== j3 && j1 !== j3) {
+                alert("Empate! Todos escolheram opções diferentes.");
+                placar.Empates++;
+            } else {
+               
+                let countPedra = 0;
+                let countPapel = 0;
+                let countTesoura = 0;
+
+                if (j1 === "pedra") countPedra++; else if (j1 === "papel") countPapel++; else countTesoura++;
+                if (j2 === "pedra") countPedra++; else if (j2 === "papel") countPapel++; else countTesoura++;
+                if (j3 === "pedra") countPedra++; else if (j3 === "papel") countPapel++; else countTesoura++;
+
+                if (countPedra === 2 && countTesoura === 1) {
+                    alert("Jogadores que escolheram pedra venceram!");
+                    if (j1 === "pedra") placar.Jogador1++;
+                    if (j2 === "pedra") placar.Jogador2++;
+                    if (j3 === "pedra") placar.Jogador3++;
+                } else if (countPapel === 2 && countPedra === 1) {
+                    alert("Jogadores que escolheram papel venceram!");
+                    if (j1 === "papel") placar.Jogador1++;
+                    if (j2 === "papel") placar.Jogador2++;
+                    if (j3 === "papel") placar.Jogador3++;
+                } else if (countTesoura === 2 && countPapel === 1) {
+                    alert("Jogadores que escolheram tesoura venceram!");
+                    if (j1 === "tesoura") placar.Jogador1++;
+                    if (j2 === "tesoura") placar.Jogador2++;
+                    if (j3 === "tesoura") placar.Jogador3++;
+                } else if (countPedra == 2 && countPapel == 1) {
+                    alert("Jogador que escolheu papel venceu!");
+                    if (j1 === "papel") placar.Jogador1++;
+                    if (j2 === "papel") placar.Jogador2++;
+                    if (j3 === "papel") placar.Jogador3++;
+                } else if (countPedra == 1 && countTesoura == 2) {
+                    alert("Jogador que escolheu pedra venceu!");
+                    if (j1 === "pedra") placar.Jogador1++;
+                    if (j2 === "pedra") placar.Jogador2++;
+                    if (j3 === "pedra") placar.Jogador3++;
+                } else if (countTesoura == 1 && countPapel === 2) {
+                    alert("Jogador que escolheu tesoura venceu!");
+                    if (j1 === "tesoura") placar.Jogador1++;
+                    if (j2 === "tesoura") placar.Jogador2++;
+                    if (j3 === "tesoura") placar.Jogador3++;
+                } else {
+                    alert("Empate!");
+                    placar.Empates++;
+                }
+            }
+
+            atualizarPlacar();
+        }
+
+        function atualizarPlacar() {
+            document.getElementById("placar").textContent =
+                "Placar:\n" +
+                "Jogador 1: " + placar.Jogador1 + "\n" +
+                "Jogador 2: " + placar.Jogador2 + "\n" +
+                "Jogador 3: " + placar.Jogador3 + "\n" +
+                "Empates: " + placar.Empates;
+        }
+
+       
+        atualizarPlacar();
+    </script>
+    <h4>📌Para começar uma nova rodada atualize a página do jogo!🔄</h4>
+</body>
+
+</html>

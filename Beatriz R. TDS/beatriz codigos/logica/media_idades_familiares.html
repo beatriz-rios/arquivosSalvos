@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de Familiares</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        // let idadePedro = 28;
+        // let idadeMarta = 32;
+        // let idadeJorge = 60;
+        // let idadeBete = 22;
+
+        // let totalIdades = (idadePedro + idadeMarta + idadeJorge + idadeBete);
+        // let mediaIdades = totalIdades/4;
+
+        // mostra(mediaIdades);
+
+        let totalFamiliares = parseInt(prompt("Quantidade de familiares"));
+
+        let numero = 1;
+        let totalIdades = 0;
+        while (numero <= totalFamiliares) {
+            let idade = parseInt(prompt("Informe a idade de seu familiar"));
+            totalIdades = totalIdades + idade;
+            numero++;
+        }
+
+        let mediaDasIdades = totalIdades / totalFamiliares;
+
+        mostra("A média das idades dos familiares é " + mediaDasIdades);
+        mostra("FIM");
+
+
+    </script>
+
+</body>
+
+</html>

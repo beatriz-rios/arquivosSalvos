@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elefante Colorido</title>
+</head>
+<body>
+<script>
+
+      function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+
+         alert("Seja Bem vindo ao elefante colorido:");
+       let nome1 = prompt("Qual o nome do jogador 1? ");
+       let nome2 = prompt("Qual o nome do jogador 2? ");
+       alert("Cada jogador terá que adivinhar a cor que o outro estiver usando");
+       alert("Serão de 3 até 5 fases(só irá passando se acertar) e serão de 7 cores");
+       alert("CORES: 1-amarelo, 2-vermelho, 3-azul, 4-verde, 5-branco, 6-preto, 7-laranja");
+       let escolhi = prompt("Qual cor o jogador 1 deseja escolher? ");
+       let escolhi2 = prompt("Qual cor o jogador 2 deseja escolher? ");
+       let sort1 = Math.round(Math.random() * 7);;
+       let sort2 = prompt(nome1 + " você tem a cor que o outro jogador digitou? ( sim/não)");
+       let sort3 = prompt(nome2 + " você tem a cor que o outro jogador digitou? (sim/não)");
+
+       if(escolhi == "sim"){
+       }else if (escolhi == "nao"){
+         mostra("O outro jogador acertou" + escolhi2);
+        if(escolhi2 == "sim"){
+        }else if(escolhi2 == "nao"){
+         mostra("O outro jogador acertou" + escolhi);
+        }
+       }
+
+       
+
+    
+       
+    
+</script>  
+</body>
+</html>

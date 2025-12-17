@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo4"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-13 05:10:19 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTM7IjA0OjU3OjE4ICI7MjU1Mw=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTM7IjA1OjEwOjE5ICI7MTsyNjUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1" type="Integer" array="False" size=""/>
+            <declare name="numero2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="numero1"/>
+            <output expression="&quot;Digite outro n&#250;mero &quot;" newline="True"/>
+            <input variable="numero2"/>
+            <declare name="soma" type="Integer" array="False" size=""/>
+            <assign variable="soma" expression="numero1 + numero2"/>
+            <output expression="&quot;A soma desses n&#250;meros &#233;: &quot; &amp; soma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

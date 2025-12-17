@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Desconto</title>
+</head>
+<body>
+    
+    <script>
+function escrever(frase) {
+     document.write(frase);
+    }
+    let produto = prompt("Quanto custa o produto desejado?");
+    let desconto = prompt("Quanto % de desconto esse item tem?");
+
+    let descontado = (produto * desconto) / 100;
+
+    function totaldesconto() {
+     escrever("o valor total do produto é : " + (produto - descontado));
+    }
+    totaldesconto();
+
+    </script>
+</body>
+</html>

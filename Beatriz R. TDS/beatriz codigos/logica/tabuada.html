@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        //let multipliacador = 1;
+        // while(multipliacador <= 10) 
+
+        let numeroEscolhido = parseInt(prompt("Digite um número para multiplicar"));
+        for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+            mostra(numeroEscolhido * multiplicador);
+        }
+
+        mostra("FIM!");
+
+    </script>
+</body>
+
+</html>

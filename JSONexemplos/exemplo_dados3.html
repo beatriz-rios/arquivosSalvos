@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de JSON</title>
+</head>
+<body>
+    <h1>Dados do Usuário</h1>
+    <p id="nome"></p>
+    <p id="idade"></p>
+    <p id="cidade"></p>
+    <p id="interesses"></p>
+
+    <script>
+        //Busca o arquivo JSON
+        fetch("dados.json")
+        .then(response => response.json()) // Converte a reposta em um obejto JSON
+        .then(dados =>{
+            //Atualiza o conteúdo da página com os dados do usuário
+            document.querySelector("#nome").textContent = "Nome: " + dados.nome;
+            document.querySelector("#idade").textContent = "Idade: " + dados.idade;
+            document.querySelector("#cidade").textContent = "Cidade: " + dados.cidade;
+            document.querySelector("#interesses").textContent = "Interesses: " + dados.interesses.join(", ");
+        });
+</script>
+</body>
+</html>

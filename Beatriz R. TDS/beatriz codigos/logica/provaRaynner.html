@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Avaliativa do Raynner</title>
+</head>
+<style>
+    body {
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(154, 147, 214);
+    }
+</style>
+
+<body>
+    
+    <h1>🤑BEM VINDO(A) AO BANCO RIO$!</h1><br>
+    <h2>Faça depósitos ou saques de forma segura e rápida!!!🔐</h2><br><br>
+    <h3>HISTÓRICO:</h3>
+    <p id="x"></p>
+    <p id="y"></p>
+    <script>
+
+
+        function depositar() {
+            let z = document.getElementById("x").innerHTML
+            let continuar = true;
+            while (continuar == true) {
+                let numero = parseFloat(prompt("Informe o valor que deseja adicionar no depósito:"))
+                valorInicial += numero;
+                document.getElementById("x").innerHTML = z + "O valor total de sua conta é de R$ " + valorInicial + ",00. <br>" + " você depositou  " + numero + "<br>"
+                let aviso = prompt("Deseja depositar mais algum valor?");
+                if (aviso != "sim") {
+                    continuar = false;
+                    break;
+                }
+            }
+        }
+        function saque() {
+            let b = document.getElementById("y").innerHTML
+            let continuar = true;
+            while (continuar == true) {
+                let numero1 = parseFloat(prompt("Informe o valor que deseja sacar na conta:"))
+
+                if (numero1 <= valorInicial) {
+                    valorInicial -= numero1;
+                    document.getElementById("y").innerHTML = b + "O que sobrou de sua conta foi de R$ " + valorInicial + ", 00. <br>" + "você sacou " + numero1 + "<br>"
+                    let aviso1 = prompt("Deseja sacar mais algum valor?");
+                    if (aviso1 != "sim") {
+                        continuar = false;
+                        break;
+
+                    }
+                } else {
+                    alert("VOCÊ NÃO PODE SACAR ALÉM DO LIMITE!!!");
+                }
+
+            }
+        }
+        function pula() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+            pula();
+        }
+        alert("Aperte OK para mostrar seu saldo inicial na tela!");
+
+        let valorInicial = 2000;
+
+        let deposito = document.write("Informe qual o valor do depósito que deseja adicionar ou sacar da sua conta:");
+
+        let botao1 = document.querySelector("Depositar");
+        let botao2 = document.querySelector("Saque");
+
+
+
+
+
+
+    </script>
+
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="saque()">Sacar</button>
+
+</body>
+
+</html>

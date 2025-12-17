@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Média Escolar</title>
+</head>
+
+<body>
+    <script>
+        function pula() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pula();
+        }
+        let nome = prompt("Digite seu nome completo");
+        let prova1 = parseInt(prompt("Insira a nota da sua primeira prova"));
+        let prova2 = parseInt(prompt("Insira a nota da sua segunda prova"));
+        let prova3 = parseInt(prompt("Insira a nota da sua terceira prova"));
+        let mediaNota = (prova1 + prova2 + prova3) / 3;
+
+        if (mediaNota >= 7) {
+            mostra(nome + " Você está aprovado(a). ");
+
+        } else {
+            mostra(nome + " Você está reprovado(a). ");
+        }
+
+        mostra(" A sua nota média é " + mediaNota + ".");
+
+    </script>
+
+</body>
+
+</html>

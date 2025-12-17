@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivo 3</title>
+</head>
+<body>
+
+ <button id="celsiuss">Calcular de C para F</button>
+  <button id="farenheits">Calcular de F para C</button>
+    <script>
+        
+        function celcius(){
+            let cel = prompt('Digite um grau para cálcular de celsius para farenheit: ');
+                let calc = (cel * 9/5)+32;
+                document.write('A conversão  de celsius para farenheit é ' , calc , "<br>");
+        }
+
+        function farenheit(){
+            let faren = prompt('Digite um grau para cálcular de farenheit para celsius: ');
+        let calcf = (faren - 32) * 5/9;
+        document.write('A conversão  de farenheit para  é celsius ' , calcf , "<br>");
+        }
+         document.getElementById('celsiuss').addEventListener('click', function(){
+            celcius();
+        });
+        document.getElementById('farenheits').addEventListener('click', function(){
+            farenheit();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="submitButton">Calcular Soma</button>
+    <script>
+        function sumNumbers() {
+
+            //Obter os valores dos números usando o prompt
+
+            let num1 = prompt('Digite o primeiro número: ');
+            let num2 = prompt('Digite o segundo número: ');
+
+
+            //Converter os valores para n´meros e realizar a soma
+
+            let sum = Number(num1) + Number(num2);
+
+            // Exibiir o rsultado da soma
+
+            document.write('A soma dos números é: ' + sum);
+        }
+
+        document.getElementById('submitButton').addEventListener('click', function(){
+            sumNumbers();
+        });
+    </script>
+</body>
+
+</html>

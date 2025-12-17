@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo7"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-15 03:54:16 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjAzOjUwOjI1ICI7MjU0NQ=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTU7IjAzOjU0OjE2ICI7MTsyNjU3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1, numero2" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira o primeiro n&#250;mero!&quot;" newline="True"/>
+            <input variable="numero1"/>
+            <output expression="&quot;Insira o segundo n&#250;mero!&quot;" newline="True"/>
+            <input variable="numero2"/>
+            <declare name="divs" type="Integer" array="False" size=""/>
+            <assign variable="divs" expression="numero1 / numero2"/>
+            <output expression="&quot;A divis&#227;o desses dois n&#250;meros &#233;: &quot; &amp; divs" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

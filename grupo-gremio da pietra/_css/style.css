@@ -1,0 +1,119 @@
+body {
+    background-color: #D5D3CA;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 5%;
+    padding: 5rem;
+    border-radius: 10px;
+}
+
+fieldset {
+    border-radius: 20px;
+    background-color: #a69a6e;
+    width: 50%;
+  height: 500px;
+}
+
+.botao{
+    display: flex;
+}
+
+.botao button{
+    margin: 0 10px;
+}
+
+#btn {
+    background-color: #645419;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#esporte{
+    width: 260px;
+}
+
+.area1{
+   margin: 50px; 
+}
+
+.area1 input{
+    width: 260px;
+    height: 20px;
+}
+.area2 {
+    float: right;
+    position: relative;
+    bottom: 220px;
+    margin-right: 150px;
+}
+
+
+h1 {
+    color: white;
+    position: absolute;
+    left: 45%;
+    top: -10px;
+    font-size: 50px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 10px;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 10px;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    transition: background-color 0.5s ease;
+    border-radius: 5px;
+}
+
+.inicio a:hover {
+    background-color: #E5322A;
+    color: black;
+    border-radius: 5px;
+}
+
+.eventos a:hover {
+    background-color: #D5D3CA;
+    color: black;
+    border-radius: 5px;
+}
+
+.galeria a:hover{
+    background-color: #645419;
+    color: black;
+    border-radius: 5px;
+}
+
+.agenda a:hover {
+    background-color: #CFB645;
+    color: black;
+    border-radius: 5px;
+}
+
+.img-logo {
+    width: 80px;
+    position: absolute;
+    top: 17px;
+    right: 30px;
+}

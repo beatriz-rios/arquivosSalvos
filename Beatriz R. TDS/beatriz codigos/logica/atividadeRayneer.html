@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10 do Raynner - Conta de Energia</title>
+
+
+<body>
+    <h2> 💡COMPANHIA SUPER CHOQUE</h2>
+    <h5>TELEFONE: (17) 99123-7824 <br>
+        ENDEREÇO: Rua Senai <br>
+        Horário de Funcionamento: 7hr ás 17hr. <br>
+        CNPJ:123.345 678/9101-12 <br></h5>
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        let nome = prompt("Digite seu nome completo do cliente: ");
+        document.write("Nome do  " + nome + "<br>");
+        function mostra(frase) {
+            document.write(frase);
+        }
+        function pula() {
+            document.write("<br>");
+        }
+
+        
+        let dataEmissao = prompt("Digite a data de emissão: ");
+        document.write("Data de emisso: " + dataEmissao + "<br>");
+        let maisMes = prompt("Qual mês o cliente deseja ver a conta?");
+        document.write("O mês da conta é: " + maisMes);
+        let endereco = prompt("Digite o nome da Rua em que o cliente mora: ");
+        document.write("Endereço do cliente:"  + endereco + "<br>");
+        let cidadeBairro = prompt("Digite a bairro, cidade e estado em que o cliente mora: (Ex: Parisi, Jardim Barreto - SP)");
+        document.write("Bairro, Cidade - UF do cliente: " + cidadeBairro + "<br>");
+        let cpf = prompt("Digite o CPF (Cadastro de Pessoa Física) do cliente: obs: 000.000.000 - 00");
+        document.write("CPF do cliente: " + cpf + "." + "<br>");
+        
+        let dataVencimento = prompt("Digite a data de vencimento: ");
+        document.write("Data de vencimento: " + dataVencimento + "<br>");
+        pula();
+        let consumoWatts = parseInt(prompt("Digite o tanto de consumo de energia em Watts que o cliente teve no mês atual: "));
+
+        let taxa = 2.00;
+        let energia = consumoWatts * taxa;
+        let geracao = energia * 1.00;
+        let distribuicao = energia * 1.50;
+        let total = energia + geracao + distribuicao + 0.20;
+
+
+        mostra("Valor em R$: " + total);
+
+        pula();
+        pula();
+
+        
+       
+        let continuar = confirm("Você quer ver leituras anteriores?");
+            if (continuar = true) {
+                 for (let i = 1; i <= 12; i++) {
+                let mesUm = prompt("Mês: ");
+                let valorMes = parseFloat(prompt("Valor: " ));
+                document.write("Mês: " + mesUm  + "<br>" + "Valor: R$ " + valorMes + "<br>");
+                 }
+            }
+            
+
+
+
+
+    </script>
+</body>
+
+</html>

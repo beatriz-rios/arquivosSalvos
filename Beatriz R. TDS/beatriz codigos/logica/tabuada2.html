@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada 2.0</title>
+</head>
+
+<body>
+    <input placeholder="Digite um número"/>
+    <button>calcular</button>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+        function calcular() {
+        for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+            mostra(input.value * multiplicador);
+        }
+    }
+    let input = document.querySelector("input");
+        let button = document.querySelector("button");
+        button.onclick = calcular;
+        
+    </script>
+    
+</body>
+
+</html>

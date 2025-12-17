@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fluxo3"/>
+        <attribute name="authors" value="TDS25"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-13 04:57:03 "/>
+        <attribute name="created" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTM7IjA0OjQyOjM0ICI7MjU0NQ=="/>
+        <attribute name="edited" value="VERTMjU7REVTS1RPUC00Nk9IME4zOzIwMjUtMDUtMTM7IjA0OjU3OjAzICI7MjsyNjU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <output expression="&quot;Qual o seu nome? &quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Ol&#225; &quot; &amp; nome" newline="True"/>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <output expression="&quot;Qual a sua idade? &quot;" newline="True"/>
+            <input variable="idade"/>
+            <output expression="&quot;Sua idade &#233;: &quot; &amp; idade" newline="True"/>
+            <declare name="profissao" type="String" array="False" size=""/>
+            <output expression="&quot;Qual a sua profiss&#227;o? &quot;" newline="True"/>
+            <input variable="profissao"/>
+            <output expression="&quot;Sua profiss&#227;o &#233;: &quot; &amp; profissao" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

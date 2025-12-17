@@ -1,0 +1,54 @@
+* {
+    text-align: center;
+    font-family: Verdana;
+}
+
+h1 {
+    font-family: Arial;
+}
+
+img {
+    height: 170px;
+    width: 300px;
+}
+
+hr {
+    height: 10px;
+    font-weight: 100;
+    background-color: black;
+}
+
+h2 {
+    color: coral;
+    text-align: center;
+    font-family: Arial;
+    ;
+}
+
+#pm {
+    background-color: rgb(105, 198, 241);
+}
+
+#pn {
+    color: rgb(220, 49, 191);
+    font-style: italic;
+    font-size: small;
+}
+
+#mistura1 {
+    color: seagreen;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 3px solid olive;
+}
+
+#mistura2 {
+    font-family: Arial;
+    border: 3px solid olive;
+}
+
+#ultimo {
+    color: rgb(255, 139, 37);
+    background-color: rgb(136, 73, 195);
+    font-size: 50px;
+}
